@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DestinationController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+
+ 
+
+<div class="jumbotron">
+ {% for dest in destinations %}
+        <a class="btn btn-primary shadow" href="{{ path('destination_type', {'environement' : dest})}}">{{dest}}</a> 
+    {% endfor %}
+    <h1>On se la coule douce:</h1>
+    {% if environement == 'soleil' %}
+    <img src="{{ asset('images/ocean.jpg') }}" alt="montagne" class="rounded shadow w-50">
+
+    {% elseif environement == 'ski' %}
+    <img src="{{ asset('images/montagne.jpg') }}" alt="montagne" class="rounded shadow w-50">
+    {% elseif environement == 'campagne' %}
+    <img src="{{ asset('images/campagne.jpg') }}" alt="montagne" class="rounded shadow w-50">
+    {% endif %}
+</div>
+{% endblock %}

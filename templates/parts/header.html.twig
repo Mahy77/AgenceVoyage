@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top onScroll">
+  <a class="navbar-brand" href="#">
+    <img src="{{ asset('images/spacex.jpg') }}" width="30" height="30" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path('destination') }}">Destinations</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path('sejour') }}">Séjours</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path('activite') }}">Activités</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ActiviteController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>voici les activités</h1>
+    <ul>
+    {% for activite in activites %}
+        <li><a href="{{path('activite_detail', {'activite' : activite.id})}}">{{activite.name}}</a><a href="{{path('activite_delete', {'activite' : activite.id})}}" class="btn btn-danger m-1">supprimer</a></li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}
